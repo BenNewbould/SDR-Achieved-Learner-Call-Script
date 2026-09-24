@@ -1,0 +1,28 @@
+/* Minimal, opinion-light base. Consumers get brand defaults, not a reset framework. */
+body { margin: 0; font: var(--type-body); color: var(--text-body); background: var(--surface-page); -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+h1, h2, h3, h4 { margin: 0; color: var(--text-strong); letter-spacing: var(--track-tight); text-wrap: balance; }
+h1 { font: var(--type-h1) } h2 { font: var(--type-h2) } h3 { font: var(--type-h3) } h4 { font: var(--type-h4) }
+p { margin: 0 0 var(--space-4) }
+a { color: var(--text-accent); text-decoration: none; font-weight: var(--w-semibold); transition: color var(--dur-fast) var(--ease-standard) }
+a:hover { color: var(--brand-hover); text-decoration: underline; text-underline-offset: 3px }
+a:active { color: var(--brand-active) }
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; border-radius: var(--radius-xs) }
+img { max-width: 100%; display: block }
+
+/* The recurring short thick accent rule that sits under a headline */
+.vel-rule { width: var(--rule-w); height: var(--rule-h); background: var(--rule-accent); border-radius: 2px }
+.vel-rule--on-dark { background: var(--white) }
+
+/* Spaced-caps eyebrow */
+.vel-eyebrow { font: var(--type-eyebrow); letter-spacing: var(--track-eyebrow); text-transform: uppercase; color: var(--text-accent) }
+
+/* Poster display caps */
+.vel-poster { font: var(--type-poster-lg); font-stretch: var(--display-stretch); letter-spacing: var(--track-poster); text-transform: uppercase; color: var(--text-strong) }
+.vel-poster em { font-style: normal; color: var(--text-accent) }
+
+/* Handwritten accent */
+.vel-script { font: var(--type-script); color: var(--text-accent) }
+
+/* Material Symbols Rounded glyph */
+.vel-icon { font-family: var(--font-icon); font-weight: normal; font-style: normal; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; direction: ltr; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased; font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24 }
+.vel-icon--filled { font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24 }

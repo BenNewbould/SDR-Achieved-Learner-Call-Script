@@ -1,0 +1,17 @@
+/* Webfonts — SUBSTITUTED from Google Fonts. See readme.md "Type substitutions".
+   Archivo   → condensed heavy poster caps (brand display)
+   Figtree   → core geometric sans: UI, body, mixed-case headlines, logotype match
+   Caveat    → handwritten accent tagline ("Skills today. Brighter tomorrows.")
+   Material Symbols Rounded → icon set */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,100..900&family=Figtree:wght@300..900&family=Caveat:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
+
+:root {
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-core: "Figtree", "Helvetica Neue", Arial, sans-serif;
+  --font-script: "Caveat", "Segoe Script", cursive;
+  --font-icon: "Material Symbols Rounded";
+
+  /* Archivo width axis used for poster caps — never fully condensed */
+  --display-stretch: 88%; /* @kind font */
+}

@@ -1,0 +1,25 @@
+:root {
+  /* Brisk and plain. No bounce, no spring, no long fades. */
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1); /* @kind other */
+
+  --dur-instant: 90ms; /* @kind other */
+  --dur-fast: 150ms; /* @kind other */   /* hover / press */
+  --dur-base: 240ms; /* @kind other */   /* colour + shadow changes */
+  --dur-slow: 420ms; /* @kind other */   /* reveal on scroll */
+
+  --transition-interactive: background-color var(--dur-fast) var(--ease-standard),
+    color var(--dur-fast) var(--ease-standard),
+    box-shadow var(--dur-base) var(--ease-standard),
+    transform var(--dur-fast) var(--ease-standard),
+    border-color var(--dur-fast) var(--ease-standard); /* @kind other */
+
+  /* Press = 1px nudge down, never a scale-shrink */
+  --press-translate: translateY(1px); /* @kind other */
+  --hover-lift: translateY(-2px); /* @kind other */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; /* @kind other */ --dur-base: 0ms; /* @kind other */ --dur-slow: 0ms; /* @kind other */ }
+}

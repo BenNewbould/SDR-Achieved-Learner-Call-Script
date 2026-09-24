@@ -1,0 +1,31 @@
+:root {
+  /* ── Radii — generous, never fully square ───────────────── */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;   /* default card / input */
+  --radius-lg: 20px;   /* panels, poster cards */
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+
+  /* ── Elevation — soft, cool-tinted, low contrast ────────── */
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px rgba(2, 22, 63, 0.06);
+  --shadow-sm: 0 2px 8px rgba(2, 22, 63, 0.06);
+  --shadow-md: 0 8px 24px rgba(2, 22, 63, 0.08);
+  --shadow-lg: 0 18px 48px rgba(2, 22, 63, 0.10);
+  --shadow-brand: 0 10px 28px rgba(0, 110, 252, 0.28);
+  --shadow-inset-top: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  /* Floating glass chip over photography (poster motif) */
+  --glass-bg: rgba(255, 255, 255, 0.86);
+  --glass-blur: blur(14px); /* @kind other */
+  --glass-border: 1px solid rgba(255, 255, 255, 0.7); /* @kind other */
+  --glass-shadow: 0 10px 30px rgba(2, 22, 63, 0.12);
+
+  /* Neon ring on the night-mode posters */
+  --neon-ring: 0 0 0 2px rgba(85, 177, 253, 0.9), 0 0 22px rgba(0, 110, 252, 0.55);
+
+  --border-w: 1px; /* @kind other */
+  --border-w-strong: 2px; /* @kind other */
+}

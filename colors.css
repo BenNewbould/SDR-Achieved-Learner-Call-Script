@@ -1,0 +1,81 @@
+:root {
+  /* ── Base: Velocity Blue ramp ───────────────────────────── */
+  --blue-50: #f2f7ff;
+  --blue-100: #e4eefd;
+  --blue-200: #cfe2fb;
+  --blue-300: #a8cdf8;
+  --blue-400: #55b1fd;  /* sampled: gradient highlight */
+  --blue-500: #2f93ee;  /* sampled: logo mark blue */
+  --blue-600: #006efc;  /* sampled: primary CTA — VELOCITY BLUE */
+  --blue-700: #0059cc;
+  --blue-800: #0146a0;
+  --blue-900: #013a7f;
+
+  /* ── Base: Navy ink ramp ────────────────────────────────── */
+  --navy-900: #02163f;  /* sampled: poster headline ink */
+  --navy-800: #06204f;
+  --navy-700: #0b2c63;
+  --navy-600: #123a7b;
+
+  /* ── Base: Neutrals (cool-tinted, never warm grey) ──────── */
+  --white: #ffffff;
+  --grey-25: #fbfcfe;
+  --grey-50: #f5f8fc;
+  --grey-100: #eff7fe;  /* sampled: tint panel */
+  --grey-200: #e2e8f0;
+  --grey-300: #ccd5e1;
+  --grey-400: #9aa8bc;
+  --grey-500: #6b7a90;
+  --grey-600: #4c5a6e;
+  --grey-700: #34404f;
+  --black: #000000;     /* logotype + hard body ink */
+
+  /* ── Base: accent on dark ───────────────────────────────── */
+  --ice-200: #ade8fe;   /* sampled: second-line headline on blue */
+
+  /* ── Base: semantic hues ────────────────────────────────── */
+  --green-600: #0f8a5f;
+  --green-100: #e2f6ee;
+  --amber-600: #b3720a;
+  --amber-100: #fdf1dc;
+  --red-600: #cc2b2b;
+  --red-100: #fbe6e6;
+
+  /* ── Semantic: text ─────────────────────────────────────── */
+  --text-strong: var(--navy-900);   /* headlines on light */
+  --text-body: #1b1f27;             /* paragraph ink */
+  --text-muted: var(--grey-500);
+  --text-accent: var(--blue-600);   /* second headline line, links */
+  --text-on-brand: var(--white);
+  --text-on-brand-muted: rgba(255, 255, 255, 0.78);
+  --text-on-dark-accent: var(--ice-200);
+
+  /* ── Semantic: surfaces ─────────────────────────────────── */
+  --surface-page: var(--white);
+  --surface-page-tint: var(--grey-50);
+  --surface-card: var(--white);
+  --surface-panel: var(--grey-100);   /* the pale-blue info panel */
+  --surface-brand: var(--blue-600);
+  --surface-brand-soft: var(--blue-100);
+  --surface-icon-tile: var(--blue-100);
+  --surface-dark: var(--navy-900);
+  --surface-inverse-card: rgba(255, 255, 255, 0.12);
+
+  /* ── Semantic: lines ────────────────────────────────────── */
+  --border-subtle: var(--grey-200);
+  --border-card: #e6ecf4;
+  --border-strong: var(--grey-300);
+  --border-on-dark: rgba(255, 255, 255, 0.22);
+  --rule-accent: var(--blue-600);     /* the short thick underline motif */
+
+  /* ── Semantic: interaction ──────────────────────────────── */
+  --brand-hover: var(--blue-700);
+  --brand-active: var(--blue-800);
+  --focus-ring: var(--blue-400);
+
+  /* ── Brand gradients (copied from source graphics) ──────── */
+  --gradient-brand: linear-gradient(135deg, #0163c8 0%, #006efc 46%, #55b1fd 100%); /* @kind color */
+  --gradient-brand-soft: linear-gradient(140deg, #ffffff 0%, #eff7fe 55%, #dceafc 100%); /* @kind color */
+  --gradient-night: radial-gradient(120% 110% at 78% 42%, #0a2f77 0%, #041a45 42%, #02112e 100%); /* @kind color */
+  --gradient-photo-fade: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.92) 34%, rgba(255, 255, 255, 0) 62%); /* @kind color */
+}
