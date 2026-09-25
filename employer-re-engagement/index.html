@@ -5,31 +5,95 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Velocity Academy – Employer Re-engagement Call Script</title>
 <style>
-:root{--navy:#061a3a;--navy2:#0d2c58;--blue:#1689e8;--ice:#eef8ff;--text:#17304f;--muted:#66788d;--line:#dbe6f1;--white:#fff;--green:#16845e;--amber:#b76f00}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f6faff;color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
-header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:28px 22px 34px}
-.head{max-width:1100px;margin:auto}.brand{font-size:18px;font-weight:800;letter-spacing:.02em}.eyebrow{margin-top:24px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#bfe5ff;font-weight:800}
-h1{margin:6px 0 0;font-size:clamp(32px,5vw,54px);line-height:1;text-transform:uppercase;letter-spacing:-.03em}.accent{color:#65c0ff}
-.nav{position:sticky;top:0;z-index:10;display:flex;gap:6px;overflow-x:auto;padding:9px 16px;background:#fff;border-bottom:1px solid var(--line)}
-.nav a{white-space:nowrap;text-decoration:none;color:#0b6cb9;background:#eef7ff;border-radius:999px;padding:6px 10px;font-size:13px;font-weight:700}
-main{max-width:1000px;margin:auto;padding:28px 18px 70px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;margin-bottom:18px;box-shadow:0 5px 18px rgba(6,26,58,.06);scroll-margin-top:62px}
-.objective{background:var(--navy);color:#fff}.objective h2,.objective strong{color:#fff}.objective .box{background:#fff;color:var(--navy);border-color:#dbe6f1}.objective .box strong{color:var(--navy)}.title{display:flex;align-items:center;gap:12px;margin-bottom:14px}.num{width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;flex:0 0 auto}
-h2{margin:0;color:var(--navy);font-size:24px;line-height:1.15}h3{margin:18px 0 7px;color:var(--navy);font-size:16px}.label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);font-weight:900;margin:10px 0 5px}
-.script{background:#f1f8fe;border-radius:13px;padding:14px 17px;margin:9px 0;font-size:17px;color:var(--navy)}.script strong{font-weight:800}
-ul{margin:8px 0;padding-left:22px}li{margin:6px 0}.note{font-size:14px;color:var(--muted);font-style:italic}.chip{display:inline-block;padding:4px 9px;border-radius:999px;font-size:12px;font-weight:800;background:#e5f4ff;color:#0b6cb9;margin:5px 4px 5px 0}.chip.green{background:#e6f7ef;color:var(--green)}.chip.amber{background:#fff1dc;color:var(--amber)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.box{border:1px solid var(--line);border-radius:12px;padding:13px;background:#fbfdff}
-.flow{display:flex;flex-wrap:wrap;gap:7px;align-items:center}.flow span{padding:7px 10px;background:#eef7ff;border-radius:999px;font-size:13px;font-weight:700}.flow b{color:var(--blue)}
-footer{max-width:1000px;margin:0 auto 40px;padding:0 18px}.foot{background:var(--navy);color:#fff;border-radius:16px;padding:20px 22px}
-@media(max-width:680px){.card{padding:19px}.script{font-size:16px}.nav{top:0}}
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,100..900&family=Figtree:wght@300..900&display=swap");
+:root{
+  --navy:#02163f;--navy2:#06204f;--blue:#006efc;--blue2:#2f93ee;--ice:#eff7fe;
+  --text:#1b1f27;--muted:#6b7a90;--line:#e2e8f0;--white:#fff;--green:#0f8a5f;--amber:#b3720a;
+  --core:"Figtree","Helvetica Neue",Arial,sans-serif;--display:"Archivo","Helvetica Neue",Arial,sans-serif
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f8fc;color:var(--text);font-family:var(--core);line-height:1.55;-webkit-font-smoothing:antialiased}
+.site-head{background:#fff;border-bottom:1px solid var(--line)}
+.site-head-inner{max-width:1080px;margin:auto;padding:18px 22px 12px}
+.brand-row{display:flex;align-items:center;gap:18px;min-height:42px}
+.va-logo{width:132px;height:auto;display:block}
+.brand-divider{width:1px;height:32px;background:#d8e0ea}
+.campaign-title{font:700 19px/1.2 var(--core);color:var(--navy)}
+.nav-wrap{max-width:1080px;margin:auto;padding:0 22px 12px;background:#fff}
+.nav-line{display:flex;align-items:center;gap:8px;min-width:0}
+.nav-line+.nav-line{margin-top:8px}
+.nav-label{flex:0 0 auto;font:800 11px/1 var(--core);letter-spacing:.16em;text-transform:uppercase;color:#71829a;margin-right:5px}
+.nav-scroll{display:flex;gap:7px;overflow-x:auto;scrollbar-width:thin;padding:2px 0 6px;min-width:0;flex:1}
+.nav-scroll a{white-space:nowrap;text-decoration:none;color:#185ea7;background:#fff;border:1px solid #cbd8e7;border-radius:999px;padding:7px 13px;font:700 13px/1 var(--core)}
+.nav-scroll a:hover,.nav-scroll a.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+main{max-width:1080px;margin:auto;padding:30px 22px 70px}
+.card{background:#fff;border:1px solid #e6ecf4;border-radius:20px;padding:30px;margin-bottom:20px;box-shadow:0 6px 22px rgba(2,22,63,.05);scroll-margin-top:118px}
+.objective{background:var(--navy);color:#fff;border-color:transparent;padding:30px}
+.objective .objective-kicker{font:800 12px/1 var(--core);letter-spacing:.15em;text-transform:uppercase;color:#65c0ff;margin-bottom:18px}
+.objective h2{display:none}
+.objective p{font-size:18px;margin:0 0 18px;color:#fff}
+.objective .grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:22px;margin-bottom:18px}
+.objective .box{position:relative;background:transparent;color:#fff;border:0;border-radius:0;padding:0 0 0 34px;font-weight:700;font-size:17px;line-height:1.35}
+.objective .box:before{content:"✓";position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#55b1fd;color:#02163f;font-weight:900;font-size:13px}
+.objective p:last-child{margin:0;font-weight:500}
+.objective p:last-child strong{color:#fff}
+.title{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.num{width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font:800 16px/1 var(--core);flex:0 0 auto}
+h2{margin:0;color:var(--navy);font:800 28px/1.15 var(--core);letter-spacing:-.02em}
+h3{margin:20px 0 8px;color:var(--navy);font:700 17px/1.3 var(--core)}
+.label{font:800 12px/1 var(--core);letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:12px 0 8px}
+.script{background:#eff7fe;border-radius:14px;padding:16px 18px;margin:10px 0;font-size:18px;color:var(--navy)}
+.script strong{font-weight:800}
+ul{margin:8px 0;padding-left:23px}li{margin:7px 0}
+.note{font-size:14px;color:var(--muted);font-style:italic}
+.chip{display:inline-block;padding:5px 10px;border-radius:999px;font:800 12px/1 var(--core);background:#fff;color:var(--blue);border:1px solid #b9d8ff;margin:6px 4px 6px 0}
+.chip.green{background:#e2f6ee;color:var(--green);border-color:#bce8d7}
+.chip.amber{background:#fdf1dc;color:var(--amber);border-color:#f3d5a4}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.box{border:1px solid var(--line);border-radius:13px;padding:14px;background:#fbfcfe}
+.flow{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.flow span{padding:7px 10px;background:#eff7fe;border-radius:999px;font-size:13px;font-weight:700}
+.flow b{color:var(--blue)}
+footer{max-width:1080px;margin:0 auto 40px;padding:0 22px}
+.foot{background:var(--navy);color:#fff;border-radius:16px;padding:20px 22px}
+@media(max-width:850px){
+  .objective .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:680px){
+  .site-head-inner,.nav-wrap,main{padding-left:14px;padding-right:14px}
+  .campaign-title{font-size:16px}.va-logo{width:112px}
+  .brand-divider{height:28px}.card{padding:20px}.script{font-size:16px}
+  .objective .grid{grid-template-columns:1fr}.objective p{font-size:16px}
+}
 </style>
 </head>
 <body>
-<header><div class="head"><div class="brand">VELOCITY ACADEMY</div><div class="eyebrow">SDR Call Script · Employer Re-engagement Campaign</div><h1>Past & Current Employer <span class="accent">Re-engagement</span></h1></div></header>
-<div class="nav">
-<a href="#objective">Objective</a><a href="#s1">1 Opening</a><a href="#s2">2 Conversational</a><a href="#s3">3 Reason</a><a href="#s4">4 AI Discovery</a><a href="#s5">5 AI Programme</a><a href="#s6">6 Broaden</a><a href="#s7">7 Recruitment</a><a href="#s8">8 Qualify</a><a href="#s9">9 Book Call</a><a href="#s10">Objections</a><a href="#s15">Close</a>
-</div>
+<header class="site-head">
+  <div class="site-head-inner">
+    <div class="brand-row">
+      <img class="va-logo" src="https://s3-eu-west-1.amazonaws.com/tpd/logos/5ad8af2e10c9e8000180c5f5/0x0.png" alt="Velocity Academy">
+      <span class="brand-divider" aria-hidden="true"></span>
+      <div class="campaign-title">Employer Re-engagement Campaign</div>
+    </div>
+  </div>
+  <div class="nav-wrap">
+    <div class="nav-line">
+      <span class="nav-label">Call Flow</span>
+      <div class="nav-scroll">
+        <a class="active" href="#s1">1 Opening</a><a href="#s2">2 Conversational</a><a href="#s3">3 Reason</a><a href="#s4">4 AI Discovery</a><a href="#s5">5 Position AI</a><a href="#s6">6 Broaden</a><a href="#s7">7 Recruitment</a><a href="#s8">8 Identify</a><a href="#s9">9 Book Call</a><a href="#s15">Close</a>
+      </div>
+    </div>
+    <div class="nav-line">
+      <span class="nav-label">If They Say</span>
+      <div class="nav-scroll">
+        <a href="#s10">Send me information</a><a href="#s11">No apprentices needed</a><a href="#s12">Already using AI</a><a href="#s13">We don’t use AI</a><a href="#s14">Another provider</a>
+      </div>
+    </div>
+  </div>
+</header>
 <main>
-<section class="card objective" id="objective"><h2>Primary Objective</h2><p>Re-engage employers that have previously worked with Velocity Academy and identify opportunities to:</p><div class="grid"><div class="box">Upskill existing employees, particularly through AI &amp; Automation</div><div class="box">Upskill staff in IT, digital, marketing or business administration</div><div class="box">Recruit a new apprentice</div><div class="box">Book a Partnership Consultation with a Velocity Academy Partnership Manager</div></div><p><strong>The SDR call is not to sell the apprenticeship in full.</strong> The aim is to identify a potential requirement, create interest and book the next conversation.</p></section>
+<section class="card objective" id="objective"><div class="objective-kicker">Primary Objective</div><h2>Primary Objective</h2><p>Re-engage employers that have previously worked with Velocity Academy and identify opportunities to:</p><div class="grid"><div class="box">Upskill existing employees, particularly through AI &amp; Automation</div><div class="box">Upskill employees in IT, digital, marketing or business administration</div><div class="box">Recruit a new apprentice</div><div class="box">Book a Partnership Consultation with a Velocity Academy Partnership Manager</div></div><p><strong>The objective of the SDR call is not to sell the apprenticeship in full.</strong> The aim is to identify a potential requirement, create interest and book the next conversation.</p></section>
 
 <section class="card" id="s1"><div class="title"><span class="num">1</span><h2>Opening</h2></div><div class="label">SDR</div><div class="script">“Hi <strong>[CONTACT NAME]</strong>, it’s <strong>[YOUR NAME]</strong> calling from Velocity Academy. How are you?”</div><p class="note">Allow them to respond.</p><div class="script">“I’m just getting back in touch because we’ve worked with <strong>[EMPLOYER NAME]</strong> previously through your apprenticeship training.”</div><span class="chip">Where learner names are available</span><div class="script">“I believe we’ve supported people including <strong>[LEARNER NAME / LEARNER NAMES]</strong> at <strong>[EMPLOYER NAME]</strong>.”</div><div class="script">“I just wanted to check in really and see how things are going with you guys at the moment.”</div></section>
 
