@@ -43,6 +43,23 @@ ul{margin:8px 0;padding-left:23px}li{margin:7px 0}.note{font-size:14px;color:var
 .chip{display:inline-block;padding:5px 10px;border-radius:999px;font:800 12px/1 var(--core);background:#fff;color:var(--blue);border:1px solid #b9d8ff;margin:6px 4px 6px 0}.chip.green{background:#e2f6ee;color:var(--green);border-color:#bce8d7}.chip.amber{background:#fdf1dc;color:var(--amber);border-color:#f3d5a4}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.box{border:1px solid var(--line);border-radius:13px;padding:14px;background:#fbfcfe}
 .flow{display:flex;flex-wrap:wrap;gap:7px;align-items:center}.flow span{padding:7px 10px;background:#eff7fe;border-radius:999px;font-size:13px;font-weight:700}.flow b{color:var(--blue)}
+.course-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.course-icon{width:38px;height:38px;border-radius:12px;background:#e8f3ff;color:#0872c8;display:grid;place-items:center;font-size:20px;font-weight:800}
+.course-filters{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.course-filter{border-radius:999px;padding:8px 14px;font:700 14px/1 var(--core);cursor:pointer;border:1px solid #cbd8e7;background:#fff;color:var(--navy)}
+.course-filter.active,.course-filter:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.course-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.course-card{display:flex;flex-direction:column;gap:12px;border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff}
+.course-industry{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.course-name{font-size:18px;font-weight:800;line-height:1.25;color:var(--navy)}
+.course-meta{display:grid;grid-template-columns:1fr 1fr;background:#eff7fe;border-radius:10px;overflow:hidden}
+.course-meta>div{padding:10px 12px}.course-meta>div+div{border-left:1px solid var(--line)}
+.course-meta small,.course-areas-title{display:block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.course-meta strong{font-size:16px;color:var(--navy)}
+.course-areas{display:flex;flex-direction:column;gap:6px}.course-area{display:flex;gap:8px;align-items:flex-start;font-size:14px;line-height:1.4;color:var(--navy)}
+.course-area:before{content:"✓";flex:0 0 18px;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#e5f3ff;color:#0872c8;font-weight:900;font-size:11px;margin-top:1px}
+.course-link{margin-top:auto;font-size:14px;font-weight:800;color:#0872c8;text-decoration:none}.course-link:hover{text-decoration:underline}
+.reference-label{font:800 11px/1 var(--core);letter-spacing:.16em;text-transform:uppercase;color:#71829a;padding:8px 12px 9px;margin-top:16px}
 footer{max-width:1040px;margin:0 auto 40px;padding:0 28px}.foot{background:var(--navy);color:#fff;border-radius:16px;padding:20px 22px}
 @media(max-width:900px){.page-shell{grid-template-columns:220px minmax(0,1fr)}.site-head-inner{padding-left:220px}.side-link{font-size:13px}.objective .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.site-head-inner{padding:0 14px}.campaign-title{font-size:16px}.va-logo{width:105px}.page-shell{display:block}.sidebar{display:none}main{padding:18px 14px 50px}.card{padding:20px}.script{font-size:16px}.objective .grid{grid-template-columns:1fr}.objective p{font-size:16px}}
@@ -77,6 +94,10 @@ footer{max-width:1040px;margin:0 auto 40px;padding:0 28px}.foot{background:var(-
   <a class="side-link" href="#s12"><span class="side-num">12</span><span>“Already using AI”</span></a>
   <a class="side-link" href="#s13"><span class="side-num">13</span><span>“We don’t use AI”</span></a>
   <a class="side-link" href="#s14"><span class="side-num">14</span><span>“Another provider”</span></a>
+  <div class="reference-label">Reference</div>
+  <a class="side-link" href="#courses"><span class="side-num">•</span><span>Course facts</span></a>
+  <a class="side-link" href="#objective"><span class="side-num">•</span><span>Primary objective</span></a>
+  <a class="side-link" href="#structure"><span class="side-num">•</span><span>Call structure</span></a>
 </aside>
 <div class="content">
 <main>
@@ -112,7 +133,80 @@ footer{max-width:1040px;margin:0 auto 40px;padding:0 28px}.foot{background:var(-
 
 <section class="card" id="s15"><div class="title"><span class="num">15</span><h2>Close</h2></div><span class="chip green">MEETING BOOKED</span><div class="script">“Brilliant. I've got you booked for <strong>[DATE/TIME]</strong> with <strong>[PARTNERSHIP MANAGER]</strong>.”</div><div class="script">“I'll send the Teams invitation over to <strong>[EMAIL ADDRESS]</strong>. Is that still the best email for you?”</div><div class="script">“They'll be able to go through the AI programme, any other skills requirements you have and the funding options available.”</div><div class="script">“Thanks <strong>[CONTACT NAME]</strong>, really good speaking with you again.”</div></section>
 
-<section class="card"><h2>SDR Call Structure</h2><div class="flow" style="margin-top:14px"><span>RECONNECT</span><b>→</b><span>PERSONALISE</span><b>→</b><span>DISCOVER</span><b>→</b><span>AI</span><b>→</b><span>WIDER SKILLS</span><b>→</b><span>RECRUITMENT</span><b>→</b><span>BOOK</span></div><p><strong>The strongest questions are:</strong></p><ul><li>How much is AI currently being used within the organisation?</li><li>Where are staff losing time through repetitive or manual processes?</li><li>Which teams are you currently looking to develop?</li><li>Is there anybody you're looking to progress internally?</li><li>Are you likely to recruit into any of those teams over the next few months?</li></ul><div class="script"><strong>Then:</strong> “Let's get you booked in with one of our Partnership Managers to explore that properly.”</div></section>
+
+<section class="card" id="courses">
+  <div class="course-head"><div class="course-icon">🎓</div><h2>Course Facts</h2></div>
+  <p class="note" style="font-style:normal;margin-top:8px">Taken from the latest course information supplied in the updated script. EPA = End-Point Assessment, completed after the training period.</p>
+  <div class="course-filters">
+    <button class="course-filter active" data-filter="All">All</button>
+    <button class="course-filter" data-filter="AI">AI</button>
+    <button class="course-filter" data-filter="IT">IT</button>
+    <button class="course-filter" data-filter="Marketing">Marketing</button>
+    <button class="course-filter" data-filter="Business">Business</button>
+  </div>
+  <div class="course-grid">
+  <article class="course-card" data-industry="AI">
+    <div><div class="course-industry">AI</div><div class="course-name">Artificial Intelligence (AI) and Automation Practitioner</div></div>
+    <div class="course-meta"><div><small>Level</small><strong>Level 4</strong></div><div><small>Duration</small><strong>12 Months</strong></div></div>
+    <div><span class="course-areas-title">Areas covered</span><div class="course-areas"><div class="course-area">Automation Foundations</div><div class="course-area">Zapier Essentials</div><div class="course-area">n8n Fundamentals</div><div class="course-area">API & Integration Skills</div><div class="course-area">Prompt Engineering Foundations</div><div class="course-area">Microsoft Copilot in M365</div><div class="course-area">Gemini for Structured Tasks</div><div class="course-area">OpenAI & API-Driven Assistants</div><div class="course-area">Responsible Use of AI Assistants</div></div></div>
+    <a class="course-link" href="https://velocity-academy.co.uk/courses/ai/artificial-intelligence-ai-and-automation-practitioner/" target="_blank" rel="noopener">Course page →</a>
+  </article>
+  <article class="course-card" data-industry="Business">
+    <div><div class="course-industry">Business</div><div class="course-name">Business Administrator</div></div>
+    <div class="course-meta"><div><small>Level</small><strong>Level 3</strong></div><div><small>Duration</small><strong>12 Months + EPA</strong></div></div>
+    <div><span class="course-areas-title">Areas covered</span><div class="course-areas"><div class="course-area">Microsoft Office Package</div><div class="course-area">Microsoft Excel Essentials</div><div class="course-area">Financial Accounting Foundations</div><div class="course-area">Business Stakeholder Management</div><div class="course-area">Strategic Business Analysis Tools</div><div class="course-area">Public Speaking and Presenting</div><div class="course-area">Change Management Models</div><div class="course-area">Project Management</div><div class="course-area">Business Legislation</div></div></div>
+    <a class="course-link" href="https://velocity-academy.co.uk/courses/ai/business-administrator/" target="_blank" rel="noopener">Course page →</a>
+  </article>
+  <article class="course-card" data-industry="IT">
+    <div><div class="course-industry">IT</div><div class="course-name">Information Communication Technician</div></div>
+    <div class="course-meta"><div><small>Level</small><strong>Level 3</strong></div><div><small>Duration</small><strong>12 Months + EPA</strong></div></div>
+    <div><span class="course-areas-title">Areas covered</span><div class="course-areas"><div class="course-area">Intro & Computing Foundations</div><div class="course-area">Advanced Computing</div><div class="course-area">Virtualisation and Cloud</div><div class="course-area">Specialism: Cybersecurity, Networking, AI, Customer Engagement, Data or Cloud Computing</div></div></div>
+    <a class="course-link" href="https://velocity-academy.co.uk/courses/it-digital/information-communication-technician/" target="_blank" rel="noopener">Course page →</a>
+  </article>
+  <article class="course-card" data-industry="IT">
+    <div><div class="course-industry">IT</div><div class="course-name">Application Support Lead</div></div>
+    <div class="course-meta"><div><small>Level</small><strong>Level 4</strong></div><div><small>Duration</small><strong>15 Months + EPA</strong></div></div>
+    <div><span class="course-areas-title">Areas covered</span><div class="course-areas"><div class="course-area">ITIL Service Management</div><div class="course-area">Artificial Intelligence</div><div class="course-area">Software Development Lifecycle</div><div class="course-area">Project Management</div><div class="course-area">Software Project Management</div><div class="course-area">Database Foundations</div><div class="course-area">Agile</div><div class="course-area">Software Testing Foundations</div><div class="course-area">Test Automation</div></div></div>
+    <a class="course-link" href="https://velocity-academy.co.uk/courses/it-digital/application-support-lead/" target="_blank" rel="noopener">Course page →</a>
+  </article>
+  <article class="course-card" data-industry="IT">
+    <div><div class="course-industry">IT</div><div class="course-name">Cyber Security Technologist</div></div>
+    <div class="course-meta"><div><small>Level</small><strong>Level 4</strong></div><div><small>Duration</small><strong>15 Months + EPA</strong></div></div>
+    <div><span class="course-areas-title">Areas covered</span><div class="course-areas"><div class="course-area">Introduction to Cyber Security</div><div class="course-area">Governance & Compliance</div><div class="course-area">Operating System Security and Threat Modelling</div><div class="course-area">Tactics, Techniques and Procedures</div><div class="course-area">IT Service Management (ITIL)</div></div></div>
+    <a class="course-link" href="https://velocity-academy.co.uk/courses/it-digital/cyber-security-technologist/" target="_blank" rel="noopener">Course page →</a>
+  </article>
+  <article class="course-card" data-industry="IT">
+    <div><div class="course-industry">IT</div><div class="course-name">Network Engineer</div></div>
+    <div class="course-meta"><div><small>Level</small><strong>Level 4</strong></div><div><small>Duration</small><strong>15 Months + EPA</strong></div></div>
+    <div><span class="course-areas-title">Areas covered</span><div class="course-areas"><div class="course-area">Network Architecture</div><div class="course-area">Topologies</div><div class="course-area">Client/Server Architecture</div><div class="course-area">Active Directory</div><div class="course-area">Cloud Architecture</div><div class="course-area">Subnetting</div><div class="course-area">Network Services</div><div class="course-area">Routing and Switching</div><div class="course-area">Network Automation</div></div></div>
+    <a class="course-link" href="https://velocity-academy.co.uk/courses/it-digital/network-engineer/" target="_blank" rel="noopener">Course page →</a>
+  </article>
+  <article class="course-card" data-industry="Marketing">
+    <div><div class="course-industry">Marketing</div><div class="course-name">Content Creator</div></div>
+    <div class="course-meta"><div><small>Level</small><strong>Level 3</strong></div><div><small>Duration</small><strong>12 Months</strong></div></div>
+    <div><span class="course-areas-title">Areas covered</span><div class="course-areas"><div class="course-area">Content planning & development</div><div class="course-area">Content creation</div><div class="course-area">Messaging & audience engagement</div><div class="course-area">Content management</div><div class="course-area">Stakeholder collaboration</div></div></div>
+    <a class="course-link" href="https://velocity-academy.co.uk/courses/marketing/content-creator/" target="_blank" rel="noopener">Course page →</a>
+  </article>
+  <article class="course-card" data-industry="Marketing">
+    <div><div class="course-industry">Marketing</div><div class="course-name">Multi-Channel Marketer</div></div>
+    <div class="course-meta"><div><small>Level</small><strong>Level 3</strong></div><div><small>Duration</small><strong>12 Months + EPA</strong></div></div>
+    <div><span class="course-areas-title">Areas covered</span><div class="course-areas"><div class="course-area">Building a Brand</div><div class="course-area">Content Marketing</div><div class="course-area">Developing Marketing Plans</div><div class="course-area">Campaign Implementation</div><div class="course-area">Budget Management</div><div class="course-area">SEO and PPC Marketing</div><div class="course-area">Website CMS systems</div><div class="course-area">Data Analysis in Marketing</div><div class="course-area">Marketing Legislation</div></div></div>
+    <a class="course-link" href="https://velocity-academy.co.uk/courses/marketing/multi-channel-marketer/" target="_blank" rel="noopener">Course page →</a>
+  </article>
+  <article class="course-card" data-industry="Marketing">
+    <div><div class="course-industry">Marketing</div><div class="course-name">Marketing Executive</div></div>
+    <div class="course-meta"><div><small>Level</small><strong>Level 4</strong></div><div><small>Duration</small><strong>12 Months + EPA</strong></div></div>
+    <div><span class="course-areas-title">Areas covered</span><div class="course-areas"><div class="course-area">Product/Service Strategy</div><div class="course-area">Marketing Mix</div><div class="course-area">Segmentation</div><div class="course-area">CRM Management</div><div class="course-area">Stakeholder Relationships</div><div class="course-area">Brand Positioning</div><div class="course-area">Marketing Legislation</div><div class="course-area">Market Research</div><div class="course-area">Customer Behaviour Analysis</div></div></div>
+    <a class="course-link" href="https://velocity-academy.co.uk/courses/marketing/marketing-executive/" target="_blank" rel="noopener">Course page →</a>
+  </article>
+  <article class="course-card" data-industry="Marketing">
+    <div><div class="course-industry">Marketing</div><div class="course-name">Marketing Manager</div></div>
+    <div class="course-meta"><div><small>Level</small><strong>Level 6</strong></div><div><small>Duration</small><strong>15 Months + EPA</strong></div></div>
+    <div><span class="course-areas-title">Areas covered</span><div class="course-areas"><div class="course-area">Marketing Concepts</div><div class="course-area">Marketing Theory</div><div class="course-area">Strategic Planning</div><div class="course-area">Commercial Awareness</div><div class="course-area">National & International Markets</div><div class="course-area">Product Development</div><div class="course-area">Senior Level Collaboration</div><div class="course-area">Consulting</div><div class="course-area">Leadership</div></div></div>
+    <a class="course-link" href="https://velocity-academy.co.uk/courses/marketing/marketing-manager/" target="_blank" rel="noopener">Course page →</a>
+  </article></div>
+</section>
+<section class="card" id="structure"><h2>SDR Call Structure</h2><div class="flow" style="margin-top:14px"><span>RECONNECT</span><b>→</b><span>PERSONALISE</span><b>→</b><span>DISCOVER</span><b>→</b><span>AI</span><b>→</b><span>WIDER SKILLS</span><b>→</b><span>RECRUITMENT</span><b>→</b><span>BOOK</span></div><p><strong>The strongest questions are:</strong></p><ul><li>How much is AI currently being used within the organisation?</li><li>Where are staff losing time through repetitive or manual processes?</li><li>Which teams are you currently looking to develop?</li><li>Is there anybody you're looking to progress internally?</li><li>Are you likely to recruit into any of those teams over the next few months?</li></ul><div class="script"><strong>Then:</strong> “Let's get you booked in with one of our Partnership Managers to explore that properly.”</div></section>
 </main>
 <footer><div class="foot"><strong>Velocity Academy Employer Re-engagement Call Script</strong><br>Standalone GitHub Pages version for use in browser or iframe.</div></footer>
 </div>
@@ -121,6 +215,13 @@ footer{max-width:1040px;margin:0 auto 40px;padding:0 28px}.foot{background:var(-
 (function(){
   const links=[...document.querySelectorAll(".side-link")];
   links.forEach(a=>a.addEventListener("click",()=>{links.forEach(x=>x.classList.remove("active"));a.classList.add("active");}));
+  const filters=[...document.querySelectorAll(".course-filter")];
+  const courseCards=[...document.querySelectorAll(".course-card")];
+  filters.forEach(btn=>btn.addEventListener("click",()=>{
+    const filter=btn.dataset.filter;
+    filters.forEach(x=>x.classList.toggle("active",x===btn));
+    courseCards.forEach(card=>card.style.display=(filter==="All"||card.dataset.industry===filter)?"flex":"none");
+  }));
 })();
 </script>
 </body></html>
