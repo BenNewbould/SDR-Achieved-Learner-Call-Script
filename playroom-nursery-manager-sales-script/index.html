@@ -8,68 +8,103 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 :root{
-  --purple:#6b2fb3;--purple2:#8d57cf;--purple100:#f1e9fb;--pink:#e45b97;
-  --cream:#fdfaf3;--ink:#241b33;--muted:#746c7e;--line:#e7e0ec;--white:#fff;
-  --green:#23875e;--amber:#b47718;--blue:#3279d7;--shadow:0 8px 30px rgba(69,39,89,.08)
+  --pastel-sky:#a9d7fe;--pastel-lilac:#cdcbf3;--pastel-mauve:#dec5e5;--pastel-blossom:#edbfc5;--pastel-peach:#fcd3a7;--pastel-lemon:#fee5a5;--pastel-mint:#c7eabf;
+  --wash-sky:#eaf4ff;--wash-lilac:#f1f0fd;--wash-mauve:#f7effa;--wash-blossom:#fdf0f2;--wash-peach:#fef4e9;--wash-lemon:#fff9e6;--wash-mint:#eef8ec;
+  --ink:#241b33;--ink2:#3b3049;--muted:#5b5468;--purple:#6b2fb3;--purple-dark:#5a2596;--purple-wash:#f4eefc;
+  --white:#fff;--cream:#fdfaf3;--grey1:#f4f4f5;--grey2:#e7e6e9;--grey3:#d3d1d8;--pink:#e85c8a;--green:#1e9e63;
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Poppins,Arial,sans-serif;line-height:1.55}
-.header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
-.header-inner{max-width:1180px;margin:auto;padding:14px 22px 10px}
-.brand{display:flex;align-items:center;gap:16px}
-.logo-mark{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#8f65d4,#6b2fb3);display:grid;place-items:center;color:#fff;font-weight:800;font-size:20px}
-.brand-copy strong{display:block;font-size:18px;color:var(--purple)}.brand-copy span{font-size:12px;color:var(--muted);letter-spacing:.04em}
-.nav{max-width:1180px;margin:auto;padding:0 22px 12px;display:flex;gap:7px;overflow-x:auto}
-.nav a{white-space:nowrap;text-decoration:none;border:1px solid #d9cbe8;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700;color:var(--purple);background:#fff}
-.nav a:hover{background:var(--purple);color:#fff;border-color:var(--purple)}
-.hero{background:linear-gradient(135deg,#5e27a1,#7a3fbd 62%,#9b67d7);color:#fff}
-.hero-inner{max-width:1180px;margin:auto;padding:42px 22px 46px}
-.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:800;color:#eadcff}
-h1{font-size:clamp(34px,5vw,60px);line-height:1.02;margin:8px 0 10px;letter-spacing:-.03em}.hero p{max-width:860px;font-size:18px;margin:0;color:#f7efff}
-.layout{max-width:1180px;margin:auto;padding:28px 22px 70px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:24px}
-aside{position:sticky;top:116px;align-self:start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:var(--shadow);max-height:calc(100vh - 140px);overflow:auto}
-aside strong{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 8px 8px}
-aside a{display:block;text-decoration:none;color:var(--ink);padding:8px 10px;border-radius:10px;font-size:13px;font-weight:600}
-aside a:hover{background:var(--purple100);color:var(--purple)}
-main{min-width:0}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;margin-bottom:18px;box-shadow:var(--shadow);scroll-margin-top:125px}
-.objective{background:#352047;color:#fff;border:0}.objective h2,.objective strong{color:#fff}.objective .pill{background:#fff;color:var(--purple)}
-.sec-title{display:flex;align-items:center;gap:12px;margin-bottom:16px}.num{width:38px;height:38px;border-radius:50%;background:var(--purple);color:#fff;display:grid;place-items:center;font-weight:800;flex:0 0 auto}
-h2{margin:0;font-size:25px;line-height:1.2;color:#352047}h3{font-size:16px;margin:18px 0 8px;color:#4b2a65}.script{background:#f7f1fc;border-left:4px solid var(--purple);border-radius:12px;padding:16px 18px;margin:11px 0;color:#3a2750;font-size:16px}
-.script .speaker{font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:var(--purple);margin-bottom:6px}.ask{font-weight:700}
-.note{font-size:13px;color:var(--muted);font-style:italic}.pill{display:inline-block;padding:5px 9px;border-radius:999px;background:var(--purple100);color:var(--purple);font-size:11px;font-weight:800;margin:4px 4px 4px 0}
-.pill.green{background:#e7f5ee;color:var(--green)}.pill.amber{background:#fff0d8;color:var(--amber)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.box{border:1px solid var(--line);border-radius:13px;padding:14px;background:#fffdf9}
-ul{margin:8px 0;padding-left:22px}li{margin:6px 0}.usp{background:linear-gradient(135deg,#f2e9fb,#fff5f9);border:1px solid #e7d3f5}
-.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.flow span{padding:7px 10px;border-radius:999px;background:#f1e9fb;color:var(--purple);font-size:12px;font-weight:700}.flow b{color:var(--purple)}
-.footer{max-width:1180px;margin:0 auto 40px;padding:0 22px}.footer-in{background:#352047;color:#fff;border-radius:18px;padding:22px}
-@media(max-width:860px){.layout{grid-template-columns:1fr}aside{display:none}.header{position:relative}.card{scroll-margin-top:20px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Poppins,Arial,sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+.app-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--grey2);box-shadow:0 1px 4px rgba(36,27,51,.04)}
+.topline{display:flex;align-items:center;gap:12px;padding:10px 16px 8px;min-height:66px}
+.logo-svg{width:36px;height:36px;flex:0 0 auto}.brand-copy{min-width:250px;flex:1}.brand-eyebrow{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--purple)}
+.brand-title{font-size:18px;font-weight:700;line-height:1.25;margin-top:1px}.searchbox{position:relative;flex:0 1 310px;min-width:210px}
+.searchbox input{width:100%;height:42px;border:1px solid var(--grey3);border-radius:11px;padding:0 15px;font:400 14px Poppins,sans-serif;color:var(--ink);outline:none;background:#fff}
+.searchbox input:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(107,47,179,.16)}
+.quickbar{display:flex;align-items:center;gap:8px;padding:0 16px 10px;overflow-x:auto;scrollbar-width:thin}
+.quicklabel{font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);white-space:nowrap;margin-right:2px}
+.quickbar a{display:inline-flex;align-items:center;height:32px;padding:0 14px;border-radius:999px;border:1px solid var(--grey3);background:#fff;color:var(--ink);text-decoration:none;font-size:13px;font-weight:500;white-space:nowrap}
+.quickbar a.objection{background:var(--wash-blossom);border-color:var(--pastel-blossom)}
+.quickbar a:hover{background:var(--purple-wash);border-color:var(--purple);color:var(--purple-dark)}
+.layout{height:calc(100vh - 108px);display:grid;grid-template-columns:290px minmax(0,1fr);max-width:none;margin:0;padding:0;gap:0}
+aside{position:relative;top:auto;align-self:stretch;background:var(--cream);border:0;border-right:1px solid var(--grey2);border-radius:0;padding:14px 10px;box-shadow:none;max-height:none;overflow-y:auto}
+.navgroup{margin-bottom:14px}.navhead{display:flex;align-items:center;gap:8px;padding:0 10px 6px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--purple)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}.dot.lilac{background:var(--pastel-lilac)}.dot.sky{background:var(--pastel-sky)}.dot.mauve{background:var(--pastel-mauve)}.dot.mint{background:var(--pastel-mint)}.dot.lemon{background:var(--pastel-lemon)}.dot.peach{background:var(--pastel-peach)}.dot.blossom{background:var(--pastel-blossom)}
+aside a{display:flex;align-items:flex-start;gap:10px;text-decoration:none;color:var(--ink);padding:7px 10px;border-radius:10px;font-size:13.5px;font-weight:400;line-height:1.35}
+aside a .n{min-width:22px;color:var(--muted);font-weight:600}aside a:hover{background:var(--grey1);color:var(--ink)}aside a.active{background:var(--purple-wash);color:var(--purple-dark);font-weight:600}
+main{min-width:0;overflow-y:auto;padding:22px 26px 70px}.main-inner{max-width:860px;margin:0 auto}
+.card{background:#fff;border:1px solid #efedf3;border-radius:22px;padding:28px 32px;margin-bottom:20px;box-shadow:0 6px 22px rgba(36,27,51,.06);scroll-margin-top:20px}
+.card.hidden{display:none}
+.objective{background:#fff;color:var(--ink);border:1px solid var(--pastel-lilac)}
+.objective-kicker,.section-kicker{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);margin-bottom:5px}
+.objective h2{display:block;color:var(--ink);font-size:27px;margin:0 0 10px}.pastel-rule{width:98px;height:5px;border-radius:999px;background:linear-gradient(90deg,var(--pastel-sky),var(--pastel-lilac),var(--pastel-blossom),var(--pastel-lemon),var(--pastel-mint));margin:10px 0 18px}
+.objective-callout{background:var(--wash-lilac);border-radius:16px;padding:18px 20px;font-size:17px;font-weight:600;line-height:1.48;margin-bottom:20px}.objective ul{margin:8px 0 0 22px}.objective li{margin:6px 0}
+.sec-title{display:flex;align-items:center;gap:13px;margin-bottom:6px}.num{width:38px;height:38px;border-radius:50%;background:var(--pastel-sky);color:var(--ink);display:grid;place-items:center;font-size:16px;font-weight:700;flex:0 0 auto}
+h2{margin:0;font-size:25px;line-height:1.25;color:var(--ink);letter-spacing:-.02em}h3{font-size:16px;margin:19px 0 8px;color:var(--ink2)}
+.card:not(.objective) .sec-title:after{content:"";display:block;position:absolute}.card:not(.objective)>.section-kicker{margin-left:0}
+.card:not(.objective)::before{content:"";display:block;width:100px;height:5px;border-radius:999px;background:linear-gradient(90deg,var(--pastel-sky),var(--pastel-lilac),var(--pastel-blossom),var(--pastel-lemon),var(--pastel-mint));margin-bottom:15px}
+.script{background:var(--wash-lilac);border:0;border-radius:15px;padding:15px 18px;margin:11px 0;color:var(--ink);font-size:16px;line-height:1.55}.script .speaker{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:var(--purple);margin-bottom:7px}.ask{font-weight:700}
+.note{font-size:13px;color:var(--muted);font-style:italic}.pill{display:inline-flex;align-items:center;height:28px;padding:0 10px;border-radius:999px;background:var(--purple-wash);color:var(--purple);border:1px solid var(--pastel-lilac);font-size:11px;font-weight:800;margin:5px 4px 5px 0}.pill.green{background:var(--wash-mint);color:var(--green);border-color:var(--pastel-mint)}.pill.amber{background:var(--wash-lemon);color:#8a6810;border-color:var(--pastel-lemon)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.box{border:1px solid var(--grey2);border-radius:14px;padding:14px;background:#fff}.usp{background:#fff;border-color:var(--pastel-mauve)}
+ul{margin:8px 0;padding-left:22px}li{margin:6px 0}.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.flow span{padding:7px 10px;border-radius:999px;background:var(--purple-wash);color:var(--purple);font-size:12px;font-weight:700}.flow b{color:var(--purple)}
+.footer{display:none}.no-results{display:none;text-align:center;padding:40px;color:var(--muted)}.no-results.show{display:block}
+@media(max-width:900px){.layout{grid-template-columns:240px minmax(0,1fr)}aside a{font-size:12px}.card{padding:24px}}
+@media(max-width:760px){.searchbox{display:none}.layout{display:block;height:auto}aside{display:none}main{overflow:visible;padding:16px}.app-header{position:relative}.card{padding:20px}.brand-copy{min-width:0}.quickbar{padding-bottom:8px}}
 </style>
 </head>
 <body>
-<header class="header">
-  <div class="header-inner">
-    <div class="brand"><div class="logo-mark">P</div><div class="brand-copy"><strong>Playroom Education</strong><span>Nursery Manager Sales Script</span></div></div>
+<header class="app-header">
+  <div class="topline">
+    <svg class="logo-svg" viewBox="0 0 105 107" aria-label="Playroom Education">
+      <defs>
+        <linearGradient id="roof" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a9d7fe"/><stop offset=".32" stop-color="#cdcbf3"/><stop offset=".6" stop-color="#edbfc5"/><stop offset=".82" stop-color="#fee5a5"/><stop offset="1" stop-color="#c7eabf"/></linearGradient>
+      </defs>
+      <path d="M8 48L46 11c4-4 9-4 13 0l38 37v47c0 6-4 10-10 10H65V81c0-11-6-18-13-18S39 70 39 81v24H18c-6 0-10-4-10-10z" fill="url(#roof)"/>
+    </svg>
+    <div class="brand-copy"><div class="brand-eyebrow">Playroom Education</div><div class="brand-title">Nursery Manager Sales Script</div></div>
+    <div class="searchbox"><input id="scriptSearch" type="search" placeholder="Search script  ( / )" aria-label="Search script"></div>
   </div>
-  <nav class="nav">
-    <a href="#opening">Opening</a><a href="#l3">Level 3 Discovery</a><a href="#ratio">Ratio</a><a href="#playroom">Why Playroom</a><a href="#ai">AI Coach</a><a href="#pathways">Pathways</a><a href="#cpd">CPD</a><a href="#recruitment">Recruitment</a><a href="#future">L5 / L2</a><a href="#close">Close</a><a href="#objections">Objections</a>
-  </nav>
+  <div class="quickbar">
+    <span class="quicklabel">Quick jump</span>
+    <a class="objection" href="#close">Send me info</a>
+    <a class="objection" href="#objections">Happy with provider</a>
+    <a class="objection" href="#objections">No time</a>
+    <a class="objection" href="#objections">AI concern</a>
+    <a class="objection" href="#objections">Why faster?</a>
+    <a class="objection" href="#objections">No need now</a>
+    <a href="#ratio">Ratio question</a>
+    <a href="#pathways">8 vs 12 month</a>
+    <a href="#laptop">Laptop offer</a>
+    <a href="#qualify">Qualify</a>
+    <a href="#close">Book call</a>
+  </div>
 </header>
 
-<section class="hero"><div class="hero-inner">
-  <div class="eyebrow">Modern early years training built around nursery life</div>
-  <h1>Nursery Manager Sales Script</h1>
-  <p>Position Playroom Education as the modern, flexible alternative to traditional early years apprenticeship delivery — real human coaching, 24/7 digital learning, embedded AI support and faster Level 3 pathways.</p>
-</div></section>
-
 <div class="layout">
-<aside><strong>Call Flow</strong>
-<a href="#objective">Objective</a><a href="#opening">1. Opening</a><a href="#l3">2. Level 3 Discovery</a><a href="#ratio">3. Ratio Question</a><a href="#playroom">4. Introduce Playroom</a><a href="#modern">5. Modern Model</a><a href="#ai">6. Human + AI Coach</a><a href="#pathways">7. 8 / 12 Month Paths</a><a href="#epa">8. Assessment</a><a href="#cpd">9. CPD</a><a href="#laptop">10. Laptop Offer</a><a href="#recruitment">11. Recruitment</a><a href="#future">12. L5 / L2 Future</a><a href="#qualify">13. Qualify</a><a href="#close">14. Close</a><a href="#objections">15. Objections</a>
+<aside>
+  <div class="navgroup"><div class="navhead"><span class="dot lilac"></span>Before the call</div><a class="active" href="#objective"><span class="n"></span><span>Primary Call Objective</span></a></div>
+  <div class="navgroup"><div class="navhead"><span class="dot sky"></span>Open &amp; discover</div><a href="#opening"><span class="n">1</span><span>Opening</span></a><a href="#l3"><span class="n">2</span><span>Initial Level 3 Discovery</span></a><a href="#ratio"><span class="n">3</span><span>The Ratio Question</span></a></div>
+  <div class="navgroup"><div class="navhead"><span class="dot mauve"></span>Pitch Playroom</div><a href="#playroom"><span class="n">4</span><span>Introduce Playroom Education</span></a><a href="#modern"><span class="n">5</span><span>Position Playroom as the Modern / Disruptive Alternative</span></a><a href="#ai"><span class="n">6</span><span>Human Coach + AI Coach Positioning</span></a><a href="#pathways"><span class="n">7</span><span>Level 3 – Two Pathways</span></a><a href="#epa"><span class="n">8</span><span>No Traditional End-Point Assessment Bottleneck</span></a></div>
+  <div class="navgroup"><div class="navhead"><span class="dot mint"></span>CPD, laptop &amp; recruitment</div><a href="#cpd"><span class="n">9</span><span>CPD Discovery</span></a><a href="#laptop"><span class="n">10</span><span>Laptop Offer</span></a><a href="#recruitment"><span class="n">11</span><span>Recruitment</span></a></div>
+  <div class="navgroup"><div class="navhead"><span class="dot lemon"></span>No Level 3 need</div><a href="#future"><span class="n">12</span><span>Future Level 5 / Level 2</span></a></div>
+  <div class="navgroup"><div class="navhead"><span class="dot peach"></span>Qualify &amp; close</div><a href="#qualify"><span class="n">13</span><span>Qualification Questions</span></a><a href="#close"><span class="n">14</span><span>Recommended Close</span></a></div>
+  <div class="navgroup"><div class="navhead"><span class="dot blossom"></span>Objections</div><a href="#objections"><span class="n">15</span><span>Common Objections</span></a></div>
 </aside>
 
-<main>
+<main><div class="main-inner"><div id="noResults" class="no-results">No sections match your search.</div>
 <section class="card objective" id="objective">
-<h2>Primary Call Objective</h2>
-<p>Identify <strong>existing nursery employees who need the Level 3 Early Years Educator qualification</strong>, particularly where gaining Level 3 would enable them to contribute more effectively towards room ratios or progress within the setting.</p>
-<div class="grid"><div class="box">Upskill existing staff to Level 3</div><div class="box">Support room-ratio capability</div><div class="box">Recruit new apprentices if required</div><div class="box">Build future L5 / L2 pipeline</div><div class="box">Open a wider CPD conversation</div></div>
+  <div class="objective-kicker">Before the call</div>
+  <h2>Primary Call Objective</h2>
+  <div class="pastel-rule"></div>
+  <div class="objective-callout">The main objective is to identify <strong>existing nursery employees who need the Level 3 Early Years Educator qualification</strong>, particularly where gaining Level 3 would enable them to contribute towards room ratios or progress within the setting.</div>
+  <h3>Secondary opportunities are:</h3>
+  <ul>
+    <li>Recruiting a new apprentice where the nursery has vacancies.</li>
+    <li>Identifying future demand for the Level 5 Early Years Lead Practitioner.</li>
+    <li>Identifying future demand for Level 2 Early Years Practitioner.</li>
+    <li>Understanding the nursery’s current CPD approach.</li>
+    <li>Introducing Playroom Essentials, the whole-setting online CPD library.</li>
+    <li>Booking a follow-up conversation where there is a genuine requirement.</li>
+  </ul>
 </section>
 
 <section class="card" id="opening"><div class="sec-title"><span class="num">1</span><h2>Opening</h2></div>
@@ -163,7 +198,43 @@ ul{margin:8px 0;padding-left:22px}li{margin:6px 0}.usp{background:linear-gradien
 <div class="flow"><span>Real Human Coach</span><b>+</b><span>24/7 Digital Learning</span><b>+</b><span>AI Coach</span><b>+</b><span>8 / 12 Month Routes</span><b>+</b><span>No Traditional EPA Bottleneck</span><b>+</b><span>Whole-Setting CPD</span></div>
 <div class="script" style="margin-top:16px"><strong>Strongest commercial question:</strong><br>“Who have you already got working in the nursery that you’d like to be able to do more?”</div>
 </section>
-</main></div>
+</div></main></div>
 
 <div class="footer"><div class="footer-in"><strong>Playroom Education · Nursery Manager Sales Script</strong><br>Public GitHub Pages version for browser and iframe use.</div></div>
-</body></html>
+<script>
+(function(){
+  const input=document.getElementById('scriptSearch');
+  const cards=[...document.querySelectorAll('main .card')];
+  const navLinks=[...document.querySelectorAll('aside a')];
+
+  function search(q){
+    q=(q||'').trim().toLowerCase();
+    let shown=0;
+    cards.forEach(card=>{
+      const ok=!q || card.innerText.toLowerCase().includes(q);
+      card.classList.toggle('hidden',!ok);
+      if(ok) shown++;
+    });
+    const nr=document.getElementById('noResults');
+    if(nr) nr.classList.toggle('show',shown===0);
+  }
+
+  if(input){
+    input.addEventListener('input',e=>search(e.target.value));
+    input.addEventListener('keydown',e=>{
+      if(e.key==='Escape'){input.value='';search('');input.blur();}
+      if(e.key==='Enter'){
+        const first=cards.find(x=>!x.classList.contains('hidden'));
+        if(first) first.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    });
+  }
+  window.addEventListener('keydown',e=>{
+    const tag=(e.target.tagName||'').toLowerCase();
+    if(e.key==='/' && tag!=='input' && tag!=='textarea'){e.preventDefault();input&&input.focus();}
+  });
+  navLinks.forEach(a=>a.addEventListener('click',()=>{
+    navLinks.forEach(x=>x.classList.remove('active'));a.classList.add('active');
+  }));
+})();
+</script></body></html>
